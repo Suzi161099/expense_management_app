@@ -28,7 +28,7 @@ class _ExpenseListScreenState extends State<ExpenseListScreen> {
       appBar: AppBar(
         title: Text("Danh sách chi tiêu"),
         centerTitle: true,
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.pink.shade900,
         foregroundColor: Colors.white,
       ),
       body: ListView.builder(

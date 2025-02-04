@@ -24,7 +24,7 @@ class _AddExpenseScreenState extends State<AddExpenseScreen> {
       appBar: AppBar(
         title: Text("Thêm chi tiêu"),
         centerTitle: true,
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.pink.shade900,
         foregroundColor: Colors.white,
       ),
       body: Padding(
