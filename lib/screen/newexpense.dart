@@ -58,18 +58,7 @@ class _AddExpenseScreenState extends State<AddExpenseScreen> {
                   },
                 ),
               ),
-              ListTile(
-                title: Text("Voice recognition"),
-                leading: Radio(
-                  value: "Voice recognition",
-                  groupValue: selectedInputMethod,
-                  onChanged: (value) {
-                    setState(() {
-                      selectedInputMethod = value.toString();
-                    });
-                  },
-                ),
-              ),
+              
               TextField(
                 controller: merchantController,
                 decoration: InputDecoration(labelText: "Merchant Name"),

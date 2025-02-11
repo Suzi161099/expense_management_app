@@ -54,13 +54,45 @@ class CategoryScreen extends StatelessWidget {
                     title: Text(categories[index]["name"], style: TextStyle(color: Colors.white)),
                     trailing: Icon(Icons.arrow_forward_ios, color: Colors.white),
                     onTap: () {
-                      // Navigate to category details
-                    },
+  Navigator.push(
+  context,
+  MaterialPageRoute(
+    builder: (context) => DetailCategoryScreen(category: categories[index]),
+  ),
+);
+},
                   );
                 },
               ),
             ),
           ],
+        ),
+      ),
+      backgroundColor: Colors.black,
+    );
+  }
+}
+
+class DetailCategoryScreen extends StatelessWidget {
+  final Map<String, dynamic> category;
+
+  DetailCategoryScreen({required this.category});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(category["name"], style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white)),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back, color: Colors.white),
+          onPressed: () => Navigator.pop(context),
+        ),
+        backgroundColor: category["color"],
+      ),
+      body: Center(
+        child: Text(
+          "Details of ${category["name"]}",
+          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white),
         ),
       ),
       backgroundColor: Colors.black,

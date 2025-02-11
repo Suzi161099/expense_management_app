@@ -69,7 +69,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     labelText: "Password",
                     labelStyle: TextStyle(color: Colors.white70),
                     filled: true,
-                    fillColor: Colors.pink.shade900,
+                    fillColor: const Color(0xFF880E4F),
                     border: OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
                     suffixText: "FORGOT",
                     suffixStyle: TextStyle(color: Colors.redAccent, fontWeight: FontWeight.bold),
