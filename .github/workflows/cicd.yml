@@ -89,15 +89,15 @@ jobs:
      
 # #B3:Run UI tests with Firebase Test Lab
     firebase-test-lab:
-     name: Run UI tests with Firebase Test Lab
-     needs: build-android
-     runs-on: ubuntu-22.04
-     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-     permissions:
-       contents: 'read'
-       id-token: 'write'
+      name: Run UI tests with Firebase Test Lab
+      needs: build-android
+      runs-on: ubuntu-22.04
+      if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+      permissions:
+        contents: 'read'
+        id-token: 'write'
 
-     steps:
+      steps:
        - uses: actions/checkout@v4
 # #B3_1:Download app APK
        - name: Download app APK
