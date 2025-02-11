@@ -12,7 +12,11 @@ class ProfileScreen extends StatelessWidget {
           icon: Icon(Icons.arrow_back, color: Colors.white),
           onPressed: () => Navigator.pop(context),
         ),
-        title: Text("Profile", style: TextStyle(color: Colors.white, fontSize: 24, fontWeight: FontWeight.bold)),
+        title: Text("Profile",
+            style: TextStyle(
+                color: Colors.white,
+                fontSize: 24,
+                fontWeight: FontWeight.bold)),
         centerTitle: true,
       ),
       body: Padding(
@@ -21,7 +25,9 @@ class ProfileScreen extends StatelessWidget {
           children: [
             Container(
               padding: EdgeInsets.all(16.0),
-              decoration: BoxDecoration(color: Colors.grey[300], borderRadius: BorderRadius.circular(10)),
+              decoration: BoxDecoration(
+                  color: Colors.grey[300],
+                  borderRadius: BorderRadius.circular(10)),
               child: Row(
                 children: [
                   CircleAvatar(
@@ -34,11 +40,21 @@ class ProfileScreen extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text("First name", style: TextStyle(color: Colors.grey, fontSize: 14)),
-                        Text("Pháp", style: TextStyle(color: Colors.black, fontSize: 18, fontWeight: FontWeight.bold)),
+                        Text("First name",
+                            style: TextStyle(color: Colors.grey, fontSize: 14)),
+                        Text("Pháp",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold)),
                         SizedBox(height: 8),
-                        Text("Last name", style: TextStyle(color: Colors.grey, fontSize: 14)),
-                        Text("Huỳnh", style: TextStyle(color: Colors.black, fontSize: 18, fontWeight: FontWeight.bold)),
+                        Text("Last name",
+                            style: TextStyle(color: Colors.grey, fontSize: 14)),
+                        Text("Huỳnh",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold)),
                       ],
                     ),
                   ),
@@ -60,14 +76,16 @@ class ProfileScreen extends StatelessWidget {
     return Container(
       margin: EdgeInsets.only(bottom: 10),
       padding: EdgeInsets.symmetric(vertical: 16, horizontal: 20),
-      decoration: BoxDecoration(color: Colors.grey[300], borderRadius: BorderRadius.circular(10)),
+      decoration: BoxDecoration(
+          color: Colors.grey[300], borderRadius: BorderRadius.circular(10)),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(title, style: TextStyle(color: Colors.black, fontSize: 16)),
           Row(
             children: [
-              Text(value, style: TextStyle(color: Colors.grey[700], fontSize: 16)),
+              Text(value,
+                  style: TextStyle(color: Colors.grey[700], fontSize: 16)),
               SizedBox(width: 10),
               Icon(Icons.arrow_forward_ios, color: Colors.grey, size: 16),
             ],
@@ -85,7 +103,8 @@ class ProfileScreen extends StatelessWidget {
       child: Container(
         padding: EdgeInsets.symmetric(vertical: 16),
         width: double.infinity,
-        decoration: BoxDecoration(color: Colors.grey[300], borderRadius: BorderRadius.circular(10)),
+        decoration: BoxDecoration(
+            color: Colors.grey[300], borderRadius: BorderRadius.circular(10)),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
         ),

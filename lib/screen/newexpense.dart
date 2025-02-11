@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+
 class AddExpenseScreen extends StatefulWidget {
   @override
   _AddExpenseScreenState createState() => _AddExpenseScreenState();
@@ -12,13 +13,14 @@ class _AddExpenseScreenState extends State<AddExpenseScreen> {
   TextEditingController amountController = TextEditingController();
   TextEditingController descriptionController = TextEditingController();
   String selectedCategory = "Food";
-  
+
   @override
   void initState() {
     super.initState();
     dateController.text = DateFormat('dd/MM/yyyy').format(DateTime.now());
   }
-   @override
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -33,7 +35,8 @@ class _AddExpenseScreenState extends State<AddExpenseScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text("How do you want to input your expense?", style: TextStyle(fontSize: 16)),
+              Text("How do you want to input your expense?",
+                  style: TextStyle(fontSize: 16)),
               ListTile(
                 title: Text("Manual input"),
                 leading: Radio(
@@ -58,7 +61,6 @@ class _AddExpenseScreenState extends State<AddExpenseScreen> {
                   },
                 ),
               ),
-              
               TextField(
                 controller: merchantController,
                 decoration: InputDecoration(labelText: "Merchant Name"),
@@ -66,7 +68,8 @@ class _AddExpenseScreenState extends State<AddExpenseScreen> {
               TextField(
                 controller: amountController,
                 keyboardType: TextInputType.number,
-                decoration: InputDecoration(labelText: "Amount", prefixText: "GBP "),
+                decoration:
+                    InputDecoration(labelText: "Amount", prefixText: "GBP "),
               ),
               TextField(
                 controller: dateController,
@@ -81,7 +84,8 @@ class _AddExpenseScreenState extends State<AddExpenseScreen> {
                   );
                   if (pickedDate != null) {
                     setState(() {
-                      dateController.text = DateFormat('dd/MM/yyyy').format(pickedDate);
+                      dateController.text =
+                          DateFormat('dd/MM/yyyy').format(pickedDate);
                     });
                   }
                 },
@@ -92,8 +96,15 @@ class _AddExpenseScreenState extends State<AddExpenseScreen> {
               ),
               DropdownButtonFormField<String>(
                 value: selectedCategory,
-                items: ["Food", "Travel", "Furniture and Equipment", "Lodging", "Meals and Entertainment"]
-                    .map((category) => DropdownMenuItem(value: category, child: Text(category)))
+                items: [
+                  "Food",
+                  "Travel",
+                  "Furniture and Equipment",
+                  "Lodging",
+                  "Meals and Entertainment"
+                ]
+                    .map((category) => DropdownMenuItem(
+                        value: category, child: Text(category)))
                     .toList(),
                 onChanged: (value) {
                   setState(() {

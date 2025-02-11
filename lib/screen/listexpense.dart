@@ -38,8 +38,10 @@ class _ExpenseListScreenState extends State<ExpenseListScreen> {
           return Card(
             margin: EdgeInsets.symmetric(vertical: 5),
             child: ListTile(
-              title: Text(_expenses[index]["title"]!, style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-              subtitle: Text(_expenses[index]["amount"]!, style: TextStyle(fontSize: 16, color: Colors.red)),
+              title: Text(_expenses[index]["title"]!,
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+              subtitle: Text(_expenses[index]["amount"]!,
+                  style: TextStyle(fontSize: 16, color: Colors.red)),
               trailing: IconButton(
                 icon: Icon(Icons.delete, color: Colors.red),
                 onPressed: () => _deleteExpense(index),

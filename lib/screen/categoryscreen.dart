@@ -15,7 +15,8 @@ class CategoryScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Category", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white)),
+        title: Text("Category",
+            style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white)),
         leading: IconButton(
           icon: Icon(Icons.arrow_back, color: Colors.white),
           onPressed: () => Navigator.pop(context),
@@ -41,7 +42,9 @@ class CategoryScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 16),
-            Text("All category", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white)),
+            Text("All category",
+                style: TextStyle(
+                    fontWeight: FontWeight.bold, color: Colors.white)),
             Divider(color: Colors.white),
             Expanded(
               child: ListView.builder(
@@ -51,16 +54,19 @@ class CategoryScreen extends StatelessWidget {
                     leading: CircleAvatar(
                       backgroundColor: categories[index]["color"],
                     ),
-                    title: Text(categories[index]["name"], style: TextStyle(color: Colors.white)),
-                    trailing: Icon(Icons.arrow_forward_ios, color: Colors.white),
+                    title: Text(categories[index]["name"],
+                        style: TextStyle(color: Colors.white)),
+                    trailing:
+                        Icon(Icons.arrow_forward_ios, color: Colors.white),
                     onTap: () {
-  Navigator.push(
-  context,
-  MaterialPageRoute(
-    builder: (context) => DetailCategoryScreen(category: categories[index]),
-  ),
-);
-},
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              DetailCategoryScreen(category: categories[index]),
+                        ),
+                      );
+                    },
                   );
                 },
               ),
@@ -82,7 +88,8 @@ class DetailCategoryScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(category["name"], style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white)),
+        title: Text(category["name"],
+            style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white)),
         leading: IconButton(
           icon: Icon(Icons.arrow_back, color: Colors.white),
           onPressed: () => Navigator.pop(context),
@@ -92,7 +99,8 @@ class DetailCategoryScreen extends StatelessWidget {
       body: Center(
         child: Text(
           "Details of ${category["name"]}",
-          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white),
+          style: TextStyle(
+              fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white),
         ),
       ),
       backgroundColor: Colors.black,

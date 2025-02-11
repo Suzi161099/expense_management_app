@@ -52,7 +52,8 @@ class MainScreen extends StatelessWidget {
               _showAddExpenseOptions(context);
               break;
             case 2:
-              Navigator.push(context, MaterialPageRoute(builder: (context) => ExpenseListScreen()));
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => ExpenseListScreen()));
               break;
           }
         },
@@ -91,7 +92,8 @@ class MainScreen extends StatelessWidget {
                 title: Text("Thông tin cá nhân"),
                 onTap: () {
                   Navigator.pop(context);
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => ProfileScreen()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => ProfileScreen()));
                 },
               ),
               ListTile(
@@ -99,7 +101,10 @@ class MainScreen extends StatelessWidget {
                 title: Text("Đổi mật khẩu"),
                 onTap: () {
                   Navigator.pop(context);
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => ChangePasswordScreen()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => ChangePasswordScreen()));
                 },
               ),
               ListTile(
@@ -107,7 +112,8 @@ class MainScreen extends StatelessWidget {
                 title: Text("Đăng xuất"),
                 onTap: () {
                   Navigator.pop(context);
-                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => LoginScreen()));
+                  Navigator.pushReplacement(context,
+                      MaterialPageRoute(builder: (context) => LoginScreen()));
                 },
               ),
             ],
@@ -134,7 +140,10 @@ class MainScreen extends StatelessWidget {
                 title: Text("Thêm thủ công"),
                 onTap: () {
                   Navigator.pop(context);
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => AddExpenseScreen()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => AddExpenseScreen()));
                 },
               ),
               ListTile(
@@ -142,7 +151,10 @@ class MainScreen extends StatelessWidget {
                 title: Text("Scan hóa đơn"),
                 onTap: () {
                   Navigator.pop(context);
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => ReceiptScannerScreen()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => ReceiptScannerScreen()));
                 },
               ),
             ],
@@ -166,14 +178,17 @@ class MainScreen extends StatelessWidget {
           SizedBox(height: 8),
           Text(
             "2.548.000 VND",
-            style: TextStyle(color: Colors.white, fontSize: 28, fontWeight: FontWeight.bold),
+            style: TextStyle(
+                color: Colors.white, fontSize: 28, fontWeight: FontWeight.bold),
           ),
           SizedBox(height: 8),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text("Thu nhập: 1.840.000 VND", style: TextStyle(color: Colors.white70)),
-              Text("Chi tiêu: 284.000 VND", style: TextStyle(color: Colors.white70)),
+              Text("Thu nhập: 1.840.000 VND",
+                  style: TextStyle(color: Colors.white70)),
+              Text("Chi tiêu: 284.000 VND",
+                  style: TextStyle(color: Colors.white70)),
             ],
           ),
         ],
@@ -185,17 +200,21 @@ class MainScreen extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text("Lịch sử chi tiêu", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+        Text("Lịch sử chi tiêu",
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
         SizedBox(height: 10),
-        _buildTransactionItem("Mua sắm", "Hôm nay", "284.000 VND", Colors.green),
-        _buildTransactionItem("Sửa chữa", "Hôm nay", "-284.000 VND", Colors.red),
+        _buildTransactionItem(
+            "Mua sắm", "Hôm nay", "284.000 VND", Colors.green),
+        _buildTransactionItem(
+            "Sửa chữa", "Hôm nay", "-284.000 VND", Colors.red),
         _buildTransactionItem("Paypal", "Hôm nay", "284.000 VND", Colors.green),
         _buildTransactionItem("Youtube", "Hôm nay", "-284.000 VND", Colors.red),
       ],
     );
   }
 
-  Widget _buildTransactionItem(String title, String date, String amount, Color color) {
+  Widget _buildTransactionItem(
+      String title, String date, String amount, Color color) {
     return ListTile(
       leading: CircleAvatar(
         backgroundColor: Colors.grey[200],
@@ -203,7 +222,8 @@ class MainScreen extends StatelessWidget {
       ),
       title: Text(title, style: TextStyle(fontWeight: FontWeight.bold)),
       subtitle: Text(date),
-      trailing: Text(amount, style: TextStyle(color: color, fontWeight: FontWeight.bold)),
+      trailing: Text(amount,
+          style: TextStyle(color: color, fontWeight: FontWeight.bold)),
     );
   }
 }

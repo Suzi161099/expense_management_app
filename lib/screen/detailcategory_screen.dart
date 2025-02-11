@@ -37,13 +37,20 @@ class DetailCategoryScreen extends StatelessWidget {
                   SizedBox(height: 8),
                   Text(
                     "Food & Drink",
-                    style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold),
                   ),
                 ],
               ),
             ),
             SizedBox(height: 20),
-            Text("Detail category", style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold)),
+            Text("Detail category",
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold)),
             SizedBox(height: 10),
             _buildTextField("Category name"),
             _buildTextField("Notes"),
@@ -81,7 +88,11 @@ class DetailCategoryScreen extends StatelessWidget {
         children: [
           Icon(Icons.refresh, color: Colors.pink),
           SizedBox(width: 8),
-          Text("Delete", style: TextStyle(color: Colors.pink, fontSize: 16, fontWeight: FontWeight.bold)),
+          Text("Delete",
+              style: TextStyle(
+                  color: Colors.pink,
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold)),
         ],
       ),
     );
@@ -95,10 +106,12 @@ class DetailCategoryScreen extends StatelessWidget {
         style: ElevatedButton.styleFrom(
           backgroundColor: Colors.grey[800],
           minimumSize: Size(double.infinity, 50),
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.0)),
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.0)),
         ),
         onPressed: () {},
-        child: Text("Save", style: TextStyle(color: Colors.white, fontSize: 16)),
+        child:
+            Text("Save", style: TextStyle(color: Colors.white, fontSize: 16)),
       ),
     );
   }

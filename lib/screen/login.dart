@@ -43,9 +43,14 @@ class _LoginScreenState extends State<LoginScreen> {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Text("Log in", style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold, color: Colors.white)),
+                Text("Log in",
+                    style: TextStyle(
+                        fontSize: 32,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white)),
                 SizedBox(height: 5),
-                Text("Please sign in to continue", style: TextStyle(fontSize: 16, color: Colors.white60)),
+                Text("Please sign in to continue",
+                    style: TextStyle(fontSize: 16, color: Colors.white60)),
                 SizedBox(height: 40),
                 TextField(
                   controller: _emailController,
@@ -56,7 +61,8 @@ class _LoginScreenState extends State<LoginScreen> {
                     labelStyle: TextStyle(color: Colors.white70),
                     filled: true,
                     fillColor: Colors.pink.shade900,
-                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(8)),
                   ),
                 ),
                 SizedBox(height: 10),
@@ -70,9 +76,11 @@ class _LoginScreenState extends State<LoginScreen> {
                     labelStyle: TextStyle(color: Colors.white70),
                     filled: true,
                     fillColor: const Color(0xFF880E4F),
-                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(8)),
                     suffixText: "FORGOT",
-                    suffixStyle: TextStyle(color: Colors.redAccent, fontWeight: FontWeight.bold),
+                    suffixStyle: TextStyle(
+                        color: Colors.redAccent, fontWeight: FontWeight.bold),
                   ),
                 ),
                 SizedBox(height: 20),
@@ -81,12 +89,14 @@ class _LoginScreenState extends State<LoginScreen> {
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.pink.shade700,
                     padding: EdgeInsets.symmetric(horizontal: 50, vertical: 15),
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8)),
                   ),
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      Text("LOGIN", style: TextStyle(fontSize: 18, color: Colors.white)),
+                      Text("LOGIN",
+                          style: TextStyle(fontSize: 18, color: Colors.white)),
                       SizedBox(width: 5),
                       Icon(Icons.arrow_forward, color: Colors.white),
                     ],
@@ -95,7 +105,8 @@ class _LoginScreenState extends State<LoginScreen> {
                 SizedBox(height: 20),
                 TextButton(
                   onPressed: () {},
-                  child: Text("Don’t have an account? Sign up", style: TextStyle(color: Colors.white70)),
+                  child: Text("Don’t have an account? Sign up",
+                      style: TextStyle(color: Colors.white70)),
                 ),
               ],
             ),
